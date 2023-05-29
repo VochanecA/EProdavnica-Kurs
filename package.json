@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/VochanecA/EProdavnica-Kurs/issues"
   },
-  "homepage": "https://github.com/VochanecA/EProdavnica-Kurs#readme"
+  "homepage": "https://github.com/VochanecA/EProdavnica-Kurs#readme",
+  "dependencies": {
+    "ejs": "^3.1.9"
+  }
 }
