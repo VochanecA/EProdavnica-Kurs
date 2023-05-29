@@ -1,13 +1,17 @@
-// TEST 1
-
 const path = require('path');
-const express= require ('express');
-const authRoutes=require('./routes/auth.routes');
-const app= express();
+const express = require('express');
+const authRoutes = require('./routes/auth.routes');
+
+const app = express();
+
+
 app.set('view engine', 'ejs');
-app.set('views'), path.join(__dirname, 'views');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(authRoutes);
 
-
-app.listen(3000);
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server radi na portu ${port}`);
+  console.log(__dirname);
+});
