@@ -5,7 +5,6 @@ const express= require ('express');
 const authRoutes=require('./routes/auth.routes');
 const app= express();
 app.set('view engine', 'ejs');
-app.engine('ejs', require('ejs').__express);
 app.set('views'), path.join(__dirname, 'views');
 
 app.use(authRoutes);
