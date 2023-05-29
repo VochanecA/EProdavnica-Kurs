@@ -3,6 +3,8 @@
 
 function getSignUp(req, res) {
 //...
+res.render();
+
 }
 
 function getLogin(req, res) {
