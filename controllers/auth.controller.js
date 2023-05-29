@@ -1,9 +1,9 @@
 // ckontrole za auth
 
 
-function getSignUp(req, res) {
+function getSignup(req, res) {
 //...
-res.render('customer/auth/sugnup');
+res.render('customer/auth/signup');
 
 }
 
