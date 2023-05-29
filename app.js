@@ -1,6 +1,6 @@
 // TEST 1
 
-const path =rewuire('path');
+const path =require('path');
 const express= require ('express');
 const authRoutes=reqire('./routes/auth.routes');
 const app= express();

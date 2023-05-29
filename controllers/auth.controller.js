@@ -3,7 +3,7 @@
 
 function getSignUp(req, res) {
 //...
-res.render();
+res.render('customer/auth/sugnup');
 
 }
 
