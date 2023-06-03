@@ -13,9 +13,17 @@ class User {
       city: city,
     };
   }
-//validacija
+
   getUserWithSameEmail() {
     return db.getDb().collection('users').findOne({ email: this.email });
+  }
+
+  async existsAlready() {
+    const existingUser = await this.getUserWithSameEmail();
+    if (existingUser) {
+      return true;
+    }
+    return false;
   }
 
   async signup() {
