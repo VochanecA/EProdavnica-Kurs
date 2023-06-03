@@ -5,6 +5,7 @@ box-sizing: border-box;
 html {
 font-family: 'Montserrat', 'sans-serif';
 --color-gray-500:rgb(37,34,31);
+--color-gray-100:rgb(165, 158, 151);
 --color-primry-500-bg: rgb(63,60,58);
 --space-1: 0.25rem;
 --space-2: 0.5rem;
@@ -14,6 +15,11 @@ font-family: 'Montserrat', 'sans-serif';
 --border-radius-small: 4px;
 --border-radius-medium: 6px;
 --shadow-medium:0 2px 8px rgba(0, 0, 0, 0.2);
+}
+body {
+background-color: var(--color-gray-500);
+color: var(--color-gray-500);
+margin: 0;
 
 
 }
