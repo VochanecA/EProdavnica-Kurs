@@ -33,6 +33,7 @@ app.use(checkAuthStatusMiddleware);
 app.use(baseRoutes);
 app.use(authRoutes);
 app.use(productsRoutes);
+app.use('/admin', adminRoutes); //dodaj parametar za path koji sluzi kao filter
 
 app.use(errorHandlerMiddleware);
 
