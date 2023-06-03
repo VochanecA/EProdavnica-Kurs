@@ -3,6 +3,15 @@ box-sizing: border-box;
 }
 
 html {
-font-family: 'Monserrat', 'sans-serif';
+font-family: 'Montserrat', 'sans-serif';
+--color-gray-500:rgb(37,34,31);
+--color-primry-500-bg: rgb(63,60,58);
+--space-1: 0.25rem;
+--space-2: 0.5rem;
+--space-4: 1rem;
+--space-6: 1.5rem;
+--space-8: 2rem;
+
+
 
 }
