@@ -10,4 +10,15 @@ form {
     margin: var(--space-8) auto;
     padding: var(--space-8);
     background-color: var(--color-gray-600);
+    text-align: center;
+}
+
+
+form a {
+    color: var(--color-primary-400);
+}
+form a:hover,
+form a active {
+color: var(--color-gray-300);
+
 }
