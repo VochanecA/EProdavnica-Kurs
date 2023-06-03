@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "express-reload": "^1.2.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "mongodb": "^4.1.0"
   }
 }
