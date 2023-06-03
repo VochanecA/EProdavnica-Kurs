@@ -17,8 +17,8 @@ form {
 form a {
     color: var(--color-primary-400);
 }
+
 form a:hover,
 form a active {
 color: var(--color-gray-300);
-
 }
