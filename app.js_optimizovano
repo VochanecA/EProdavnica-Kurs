@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-//dodati kompresiju
 const compression = require('compression');
 const csrf = require('csurf');
 const expressSession = require('express-session');
@@ -17,12 +16,13 @@ const baseRoutes = require('./routes/base.routes');
 const adminRoutes = require('./routes/admin.routes');
 const cartRoutes = require('./routes/cart.routes');
 
+
 const app = express();
-app.use(compression());
 const sessionConfig = createSessionConfig();
 
-// omoguci async/await i  optimizuj middleware raspored
+// Enable async/await and optimize middleware order
 app.use(express.static('public'));
+
 app.use('/products/assets', express.static('product-data'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -32,22 +32,22 @@ app.use(csrf());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Optimizuj konekciju ka bazi
+// Optimize database connection handling
 db.connectToDatabase()
   .then(() => {
     app.listen(3000);
   })
   .catch((error) => {
-    console.log(' Greska u konekciji ka bazi!');
+    console.log('Failed to connect to the database!');
     console.log(error);
   });
 
-// Implementiraj middleware-ove spicificne optimizacije
+// Implement middleware-specific optimizations
 app.use(cartMiddleware);
 app.use(addCsrfTokenMiddleware);
 app.use(checkAuthStatusMiddleware);
 
-// Optimizuj view engine i reneder template-a
+// Optimize view engine and template rendering
 app.use(baseRoutes);
 app.use(authRoutes);
 app.use(productsRoutes);
@@ -55,7 +55,7 @@ app.use('/cart', cartRoutes);
 app.use(protectRoutesMiddleware);
 app.use('/admin', adminRoutes);
 
-// Omoguci kompresiju compression
+// Enable compression
 app.use(require('compression')());
 
 app.use(errorHandlerMiddleware);
