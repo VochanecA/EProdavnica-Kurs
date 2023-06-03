@@ -48,4 +48,12 @@ a{
     padding: var(--space-2) var(--space-6);
     background-color: burlywood;
     border: 1px solid var(--color-gray-100);
+    border-radius: 1px;
+}
+
+.btn:hover,
+.btn:active {
+
+
+    
 }
